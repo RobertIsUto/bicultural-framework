@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bicultural Value Conflict: A Contributing Factor Framework for Mental Health</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: #ffffff;
+            font-size: 16px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+        
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .header-content h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+        
+        .header-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+        
+        nav {
+            background: #34495e;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 3rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .main-content {
+            padding: 3rem 0;
+        }
+        
+        .section {
+            margin-bottom: 4rem;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 3rem;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        .section h2 {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            border-left: 5px solid #3498db;
+            padding-left: 1rem;
+            font-weight: 400;
+        }
+        
+        .section h3 {
+            font-size: 1.8rem;
+            color: #34495e;
+            margin: 2.5rem 0 1.5rem 0;
+            font-weight: 500;
+        }
+        
+        .section h4 {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+        }
+        
+        .section p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        
+        .contributing-factor-box {
+            background: #e8f4f8;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .contributing-factor-box h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .risk-factor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .risk-factor-card {
+            background: #ffffff;
+            border: 1px solid #bdc3c7;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .risk-factor-card h4 {
+            color: #2c3e50;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: white;
+        }
+        
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        th {
+            background: #ecf0f1;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .correlation-table th {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .code-box {
+            background: #27ae60;
+            color: white;
+            padding: 1rem;
+            border-radius: 4px;
+            font-family: monospace;
+            margin: 1rem 0;
+            text-align: center;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+        
+        .theoretical-foundation {
+            background: #e8f4f8;
+            border-left: 5px solid #3498db;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .treatment-modification {
+            background: #e8f6f3;
+            border-left: 5px solid #27ae60;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .research-note {
+            background: #fef9e7;
+            border-left: 5px solid #f39c12;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+        }
+        
+        .clinical-implications {
+            background: #f4ecf7;
+            border-left: 5px solid #8e44ad;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .specifier-criteria {
+            background: #e8f6f3;
+            border: 1px solid #27ae60;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .criteria-list {
+            counter-reset: criteria-counter;
+            list-style: none;
+            padding: 0;
+        }
+        
+        .criteria-list > li {
+            counter-increment: criteria-counter;
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+        
+        .criteria-list > li::before {
+            content: counter(criteria-counter) ".";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            color: #27ae60;
+        }
+        
+        .subcriteria {
+            list-style: none;
+            padding-left: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .subcriteria li {
+            margin: 0.8rem 0;
+            position: relative;
+        }
+        
+        .subcriteria li::before {
+            content: "•";
+            position: absolute;
+            left: -1rem;
+            color: #3498db;
+            font-weight: bold;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        
+        .citation {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .risk-factor-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .header-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Bicultural Value Conflict</h1>
+                <p class="header-subtitle">A Contributing Factor Framework for Mental Health Disorders</p>
+                <p style="margin-top: 1rem; font-size: 1rem; opacity: 0.8;">Developed by Robert Huynh Nguyen</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#framework">Framework</a></li>
+                <li><a href="#risk-factors">Risk Factors</a></li>
+                <li><a href="#specifiers">Clinical Specifiers</a></li>
+                <li><a href="#modifications">Treatment Modifications</a></li>
+                <li><a href="#research">Research Applications</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content container">
+        <section class="section">
+            <h2>Framework Overview</h2>
+            <p>Bicultural Value Conflict (BVC) represents a psychosocial contributing factor that increases risk for and complicates the presentation of established mental health disorders, particularly Major Depressive Disorder, Generalized Anxiety Disorder, and Adjustment Disorders. Rather than constituting a distinct diagnostic entity, BVC functions as an environmental stressor and risk factor that significantly influences the onset, severity, and treatment response of existing mental health conditions in bicultural populations.</p>
+            
+            <div class="contributing-factor-box">
+                <h4>Proposed DSM-5-TR Addition</h4>
+                <p><strong>V62.4X Bicultural Value Conflict</strong> - A condition that may be a focus of clinical attention. This category can be used when the focus of clinical attention is a problem related to conflicting cultural value systems that contributes to the development or exacerbation of mental health symptoms.</p>
+            </div>
+            
+            <div class="theoretical-foundation">
+                <h4>Environmental Stress Model</h4>
+                <p>BVC operates as an environmental stressor that creates episodic psychological burden during situations requiring navigation of incompatible cultural expectations. This stress model positions cultural value conflicts as measurable environmental factors that increase vulnerability to mental health disorders, similar to how other psychosocial stressors (e.g., financial strain, relationship conflict) contribute to mental health conditions.</p>
+            </div>
+        </section>
+
+        <section id="framework" class="section">
+            <h2>Theoretical Framework</h2>
+            
+            <h3>BVC as Risk Factor Model</h3>
+            
+            <div class="theoretical-foundation">
+                <h4>Environmental Cultural Load Theory</h4>
+                <p>Bicultural individuals experience measurable psychological stress when environmental contexts demand simultaneous adherence to incompatible cultural value systems. This "cultural load" functions as a chronic environmental stressor that increases risk for developing mood and anxiety disorders, particularly during high-stress periods or major life transitions.</p>
+                
+                <p><strong>Key Mechanism:</strong> Environmental situations that require decision-making across conflicting cultural frameworks create cognitive burden and emotional distress. When this occurs repeatedly or during vulnerable periods, it can precipitate or exacerbate existing mental health vulnerabilities.</p>
+            </div>
+            
+            <h3>Cultural Value System Framework</h3>
+            
+            <div class="risk-factor-grid">
+                <div class="risk-factor-card">
+                    <h4>Survival-Mode Cultural Framework</h4>
+                    <p><strong>Core Characteristics:</strong> Emphasizes collective security, risk minimization, resource conservation, family loyalty, and hierarchical respect.</p>
+                    <p><strong>Adaptive Context:</strong> Developed in resource-scarce or high-threat environments where community survival depends on proven strategies and collective action.</p>
+                </div>
+                
+                <div class="risk-factor-card">
+                    <h4>Growth-Mode Cultural Framework</h4>
+                    <p><strong>Core Characteristics:</strong> Emphasizes individual achievement, innovation, risk-taking, personal expression, and egalitarian relationships.</p>
+                    <p><strong>Adaptive Context:</strong> Developed in resource-abundant, low-threat environments where individual success and innovation are valued and rewarded.</p>
+                </div>
+            </div>
+            
+            <div class="research-note">
+                <p><strong>Clinical Observation:</strong> Individuals navigating survival-mode and growth-mode cultural frameworks simultaneously report increased decision-making difficulty, emotional distress, and functional impairment during situations where cultural values provide contradictory guidance.</p>
+            </div>
+        </section>
+
+        <section id="risk-factors" class="section">
+            <h2>Risk Factor Analysis</h2>
+            
+            <h3>BVC as Predictor for Mental Health Disorders</h3>
+            
+            <div class="table-container">
+                <table class="correlation-table">
+                    <thead>
+                        <tr>
+                            <th>Mental Health Condition</th>
+                            <th>BVC Correlation</th>
+                            <th>Proposed Mechanism</th>
+                            <th>Clinical Presentation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Major Depressive Disorder</strong></td>
+                            <td>High correlation in bicultural populations</td>
+                            <td>Chronic cultural conflict stress leads to hopelessness and decision paralysis</td>
+                            <td>Depression with prominent guilt about cultural "betrayal," decision avoidance</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Generalized Anxiety Disorder</strong></td>
+                            <td>Elevated risk during cultural transition periods</td>
+                            <td>Anticipatory anxiety about potential cultural value conflicts</td>
+                            <td>Anxiety focused on social/family judgment, performance in cultural contexts</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Adjustment Disorders</strong></td>
+                            <td>Strong correlation during environmental changes</td>
+                            <td>Difficulty adapting when cultural conflict load increases</td>
+                            <td>Impaired functioning specifically in bicultural navigation situations</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Relationship Difficulties</strong></td>
+                            <td>High impact on romantic and family relationships</td>
+                            <td>Cultural value conflicts affect relationship decision-making</td>
+                            <td>Relationship breakdown due to cultural expectation incompatibility</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h3>Environmental Risk Factors</h3>
+            
+            <div class="risk-factor-grid">
+                <div class="risk-factor-card">
+                    <h4>High-Risk Environments</h4>
+                    <ul class="subcriteria">
+                        <li>Living situations requiring simultaneous cultural performance</li>
+                        <li>Academic or occupational environments with conflicting cultural expectations</li>
+                        <li>Family environments with rigid cultural adherence expectations</li>
+                        <li>Social environments that pressure cultural conformity</li>
+                    </ul>
+                </div>
+                
+                <div class="risk-factor-card">
+                    <h4>Protective Factors</h4>
+                    <ul class="subcriteria">
+                        <li>Access to bicultural peer support networks</li>
+                        <li>Family understanding of cultural adaptation challenges</li>
+                        <li>Environmental flexibility in cultural expression</li>
+                        <li>Professional support with cultural competency</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="specifiers" class="section">
+            <h2>Clinical Specifiers</h2>
+            
+            <h3>Proposed Specifiers for Existing Disorders</h3>
+            
+            <div class="specifier-criteria">
+                <h4>With Bicultural Value Conflict Features</h4>
+                <p>This specifier can be applied to Major Depressive Disorder, Generalized Anxiety Disorder, or Adjustment Disorders when the following criteria are met:</p>
+                
+                <ol class="criteria-list">
+                    <li>Individual has significant exposure to two or more cultural value systems with documented incompatible expectations in key life domains (family relationships, career, social behavior, life decisions).</li>
+                    
+                    <li>Symptom onset or exacerbation is temporally related to situations requiring navigation of conflicting cultural expectations.</li>
+                    
+                    <li>Evidence of environmental cultural load, including:
+                        <ul class="subcriteria">
+                            <li>Decision-making difficulties specifically during cultural value conflicts</li>
+                            <li>Emotional distress that improves when cultural conflict pressure is reduced</li>
+                            <li>Functional impairment in situations requiring bicultural navigation</li>
+                        </ul>
+                    </li>
+                    
+                    <li>Symptoms are not better explained by general acculturation stress or cultural adjustment difficulties.</li>
+                </ol>
+            </div>
+            
+            <h3>Severity Indicators</h3>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Severity Level</th>
+                            <th>Environmental Impact</th>
+                            <th>Functional Impairment</th>
+                            <th>Clinical Presentation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Mild</strong></td>
+                            <td>Occasional cultural conflict situations cause manageable distress</td>
+                            <td>Minor impact on decision-making, minimal avoidance</td>
+                            <td>Symptoms emerge during specific cultural conflicts, resolve quickly</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Moderate</strong></td>
+                            <td>Regular cultural conflicts cause significant distress</td>
+                            <td>Notable impact on relationships, academic/occupational performance</td>
+                            <td>Persistent symptoms during cultural conflict periods, anticipatory anxiety</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Severe</strong></td>
+                            <td>Environmental cultural conflicts cause overwhelming distress</td>
+                            <td>Major avoidance of cultural conflict situations, relationship breakdown</td>
+                            <td>Chronic symptoms, significant functional impairment, social isolation</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="modifications" class="section">
+            <h2>Treatment Modifications</h2>
+            
+            <h3>Culturally-Informed Treatment Approaches</h3>
+            
+            <div class="treatment-modification">
+                <h4>Modified Cognitive Behavioral Therapy (CBT-BVC)</h4>
+                <p><strong>Modification Focus:</strong> Standard CBT adapted to address cultural value conflicts as environmental stressors rather than cognitive distortions.</p>
+                
+                <p><strong>Key Adaptations:</strong></p>
+                <ul class="subcriteria">
+                    <li>Cultural value mapping and conflict identification</li>
+                    <li>Environmental assessment of cultural load factors</li>
+                    <li>Development of cultural integration rather than choice-based strategies</li>
+                    <li>Family therapy components addressing intergenerational cultural differences</li>
+                </ul>
+            </div>
+            
+            <div class="treatment-modification">
+                <h4>Environmental Cultural Load Management</h4>
+                <p><strong>Treatment Goal:</strong> Reduce environmental cultural conflicts while maintaining cultural identity and family relationships.</p>
+                
+                <p><strong>Intervention Strategies:</strong></p>
+                <ul class="subcriteria">
+                    <li>Environmental modification to reduce unnecessary cultural conflict exposure</li>
+                    <li>Development of decision-making frameworks that integrate multiple cultural perspectives</li>
+                    <li>Communication strategies for navigating family and social cultural expectations</li>
+                    <li>Stress management techniques specifically for cultural conflict episodes</li>
+                </ul>
+            </div>
+            
+            <div class="research-note">
+                <p><strong>Contraindicated Approaches:</strong> Treatment approaches that require choosing between cultural frameworks or suppressing cultural values may exacerbate symptoms in individuals with BVC features. Cultural assimilation-focused interventions should be avoided.</p>
+            </div>
+        </section>
+
+        <section id="research" class="section">
+            <h2>Research Applications</h2>
+            
+            <p>Establishing BVC as a contributing factor for mental health disorders requires validation studies demonstrating its predictive value, correlation patterns, and treatment modification efficacy across diverse bicultural populations.</p>
+            
+            <div class="clinical-implications">
+                <h4>Priority Research Areas</h4>
+                <ul class="subcriteria">
+                    <li><strong>Prevalence Studies:</strong> Determine rates of BVC features across different mental health disorders in bicultural populations</li>
+                    <li><strong>Correlation Analysis:</strong> Establish statistical relationships between BVC severity and mental health symptom severity</li>
+                    <li><strong>Treatment Outcome Studies:</strong> Compare efficacy of culturally-modified treatments versus standard treatments for individuals with BVC features</li>
+                    <li><strong>Longitudinal Risk Assessment:</strong> Track BVC as predictor for mental health disorder development over time</li>
+                    <li><strong>Cross-Cultural Validation:</strong> Validate BVC framework across different cultural combinations and immigration patterns</li>
+                </ul>
+            </div>
+            
+            <div class="theoretical-foundation">
+                <h4>Preliminary Evidence</h4>
+                <p>Initial observations suggest dose-response relationships between environmental cultural load and mental health symptoms, with symptom improvement observed during periods of reduced cultural conflict exposure. This pattern supports BVC as environmental contributing factor rather than trait-based vulnerability.</p>
+            </div>
+            
+            <div class="code-box">
+                PROPOSED DSM-5-TR CODE: V62.4X Bicultural Value Conflict
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bicultural Value Conflict Contributing Factor Framework</p>
+            <p>Developed by Robert Huynh Nguyen - Advancing mental health understanding through cultural risk factor recognition</p>
+            <div class="citation">
+                <p>Proposed citation format: Nguyen, R. H. (2025). Bicultural Value Conflict: A Contributing Factor Framework for Mental Health Disorders. Journal of Cultural Mental Health, [Volume], [Pages].</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
